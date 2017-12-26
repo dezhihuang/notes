@@ -86,5 +86,17 @@
         
         
         
-        
+# 八、安装Java
+> JDK所有版本在官网中的下载地址:[http://www.oracle.com/technetwork/java/archive-139210.html](http://www.oracle.com/technetwork/java/archive-139210.html) 
+> 
+
+    1.下载JDK，如：jdk-8u144-linux-x64.tar.gz。
+    2.新建java安装目录：/usr/local/java
+        sudo mkdir /usr/local/java 
+    3.解压
+        sudo tar -xvzf jdk-8u144-linux-x64.tar.gz -C /usr/local/java/
+    4.配置环境变量，打开/etc/profile末尾添加如下代码
+        export JAVA_HOME=/usr/local/java/jdk1.8.0_144
+        export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/jre/lib
+        export PATH=$JAVA_HOME/bin:$PATH      
         
