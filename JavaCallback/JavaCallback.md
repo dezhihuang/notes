@@ -1,9 +1,19 @@
-http://blog.csdn.net/weixin_35649408/article/details/51992451
+# 什么是回调
+1. 老板手头上工作很多，突然遇到一个比较耗费时间的问题，当然不能自己解决，所以打电话给一个员工，叫他去解决问题。并且告诉他老板的电话一直开着，解决问题后就马上打电话报告给老板。
 
-http://blog.csdn.net/xiaanming/article/details/8703708/
+2. 有一天张三遇到一个很难的问题，问题是“1 + 1 = ?”，就打电话问李四，李四一下子也不知道，需要计算一下才能得出答案，张三也不会傻傻的拿着电话去等李四的答案吧，于是张三就对李四说，我先去玩，你知道了答案就打我电话告诉我，于是挂了电话，玩去了，过了一个小时，李四打了张三电话，告诉他答案是2。
 
-https://www.cnblogs.com/Fndroid/p/5308713.html
+3. 第三个解释
 
-https://www.jianshu.com/p/c92525606e70
 
-http://blog.csdn.net/qq_16558621/article/details/51334626
+
+
+[1](http://blog.csdn.net/weixin_35649408/article/details/51992451)
+
+[2](http://blog.csdn.net/xiaanming/article/details/8703708/)
+
+[3](https://www.cnblogs.com/Fndroid/p/5308713.html)
+
+[4](https://www.jianshu.com/p/c92525606e70)
+
+[5](http://blog.csdn.net/qq_16558621/article/details/51334626)
