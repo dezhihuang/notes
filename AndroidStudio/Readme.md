@@ -79,6 +79,44 @@
 
 <br>
 <br>
+
+## 生成的签名APK指定文件名
+
+在 Module 的 build.gradle 文件中添加一个获取当前时间的函数（在``Android``节点下）：
+```
+android {
+	//......
+	def getCurTime() {
+			return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("Asia/Shanghai"))
+	}
+	//......
+}
+```
+
+在 Module 的 build.gradle 文件再添加以下语句(也是在``Android``节点下)，编译生成文件名如：MyApp_201801040921_v1.0.apk
+```
+android.applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+        output.outputFile = new File(output.outputFile.parent, "MyApp_"+ getCurTime() + "_v" + android.defaultConfig.versionName + ".apk" );
+    }
+}
+```
+
+Android Studio 3.0及以上需要注意修改：
+- all() 代替 each()
+- outputFileName 代替 output.outputFile
+
+```
+android.applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def filename = "MyApp_" + getCurTime()
+        filename = filename + "_v" + android.defaultConfig.versionName
+        filename = filename + "_" + buildType.name + ".apk"
+        outputFileName  = filename
+    }
+}
+```
+
 <br>
 <br>
 <br>
