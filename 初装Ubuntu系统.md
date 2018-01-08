@@ -99,4 +99,26 @@
         export JAVA_HOME=/usr/local/java/jdk1.8.0_144
         export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/jre/lib
         export PATH=$JAVA_HOME/bin:$PATH      
-        
+
+
+# 九、安装NDK
+    1.下载NDK
+		[NDK下载](https://developer.android.google.cn/ndk/downloads/index.html)
+	
+	2.解压(文件名：android-ndk-r14b-linux-x86_64.zip,解压后文件名为：android-ndk-r14b)
+		unzip android-ndk-r14b-linux-x86_64.zip 
+	
+	3.将整个文件夹移到/var/local/目录下
+		mv android-ndk-r14b /var/local/
+
+	4.配置环境变量
+		export PATH=/var/local/android-ndk-r14b:$PATH 
+
+	5.注意
+		64位系统编译出现以下错误：
+			warning: shared library text segment is not shareable
+			error: treating warnings as errors 
+
+		解决办法：在Android.mk文件中添加以下语句：
+			LOCAL_DISABLE_FATAL_LINKER_WARNINGS := true
+			LOCAL_LDFLAGS += -Wl,--no-warn-shared-textrel       
